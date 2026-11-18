@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    padding: 24px;
+    min-height: 100vh;
+    background-color: #eaf3f8;
+    font-family: Arial, sans-serif;
+}
+
+
+#canva {
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#location {
+    background-color: white;
+    border-radius: 16px;
+    padding: 24px;
+    margin-top: 60px;
+    margin-bottom: 30px;
+}

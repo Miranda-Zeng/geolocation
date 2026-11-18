@@ -22,16 +22,14 @@ function openServices() {
             (lonDiff * 85000) ** 2
         );
 
-        console.log("Distance to penguin:", distance, "meters");
-        console.log("Location accuracy:", e.coords.accuracy, "meters");
             // myLocation.innerHTML = "you're here: " + e.coords.latitude + ", " + e.coords.longitude;
-            console.log("location:", e.coords.latitude, e.coords.longitude);
-            if (Math.abs(e.coords.latitude - PenguinLat) < 0.0001 && Math.abs(e.coords.longitude - PenguinLong) < 0.0001) {
-                myLocation.innerHTML = "you're steaming hot"       
+        console.log("location:", e.coords.latitude, e.coords.longitude);
+        if (Math.abs(e.coords.latitude - PenguinLat) < 0.0001 && Math.abs(e.coords.longitude - PenguinLong) < 0.0001) {
+            myLocation.innerHTML = "The penguin is nearby!! Look around 👀"       
             }
-            else {
-                myLocation.innerHTML = "you're cold"
-                myLocation.innerHTML += ", you are this far away: " + distance +" meters"
+        else {
+            myLocation.innerHTML = "Keep looking"
+            myLocation.innerHTML += ", you are this far away: " + distance +" meters"
             }
         });    
         
