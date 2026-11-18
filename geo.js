@@ -5,6 +5,7 @@ let PenguinLong = -73.98756837816525;
 //1 unit is 365,221 ft
 //.0001 is approx 36.5 ft
 
+
 function openServices() {
     if ( 'geolocation' in navigator) {
         console.log(navigator);
@@ -12,6 +13,17 @@ function openServices() {
         //console.log(navigator.geolocation.getCurrentPosition);
         //navigator geolocation getcurrentposition takes a callback function as an argument (provides coords when they are available )
         navigator.geolocation.getCurrentPosition(function(e) {
+
+        let latDiff = Math.abs(e.coords.latitude - PenguinLat);
+        let lonDiff = Math.abs(e.coords.longitude - PenguinLong);
+
+        let distance = Math.sqrt(
+            (latDiff * 111000) ** 2 +
+            (lonDiff * 85000) ** 2
+        );
+
+        console.log("Distance to penguin:", distance, "meters");
+        console.log("Location accuracy:", e.coords.accuracy, "meters");
             // myLocation.innerHTML = "you're here: " + e.coords.latitude + ", " + e.coords.longitude;
             console.log("location:", e.coords.latitude, e.coords.longitude);
             if (Math.abs(e.coords.latitude - PenguinLat) < 0.0001 && Math.abs(e.coords.longitude - PenguinLong) < 0.0001) {
@@ -21,11 +33,12 @@ function openServices() {
                 myLocation.innerHTML = "you're cold"
                 // myLocation.innerHTML += ", you are this many feet away: " + (Math.abs(e.coords.latitude - PenguinLat) + Math.abs(e.coords.longitude - PenguinLong) * 364000)
             }
-        }); 
-        
+        });    
         
     }
 };
+
+
 
 // function checkLocation () {
 //   if ( 'geolocation' in navigator) {
