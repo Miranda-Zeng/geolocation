@@ -16,15 +16,15 @@ body {
 h1{
     font-size: 32px;
     margin-top: 50px;
-    color: #234f70;
+    color: #041c2e;
 }
 
 button{
     width: 100%;
     padding: 18px;
     border: none;
-    border-radius: 12px;
-    background-color: #234f70;
+    border-radius: 20px;
+    background-color: #777f85d4;
     color: white;
     font-size: 24px;
 }
