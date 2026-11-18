@@ -31,7 +31,7 @@ function openServices() {
             }
             else {
                 myLocation.innerHTML = "you're cold"
-                // myLocation.innerHTML += ", you are this many feet away: " + (Math.abs(e.coords.latitude - PenguinLat) + Math.abs(e.coords.longitude - PenguinLong) * 364000)
+                myLocation.innerHTML += ", you are this far away: " + distance +" meters"
             }
         });    
         
