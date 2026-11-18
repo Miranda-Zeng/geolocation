@@ -23,10 +23,10 @@ button{
     width: 100%;
     padding: 18px;
     border: none;
-    border-radius: 20px;
+    border-radius: 10px;
     background-color: #777f85d4;
-    color: rgb(245, 140, 74);
-    font-size: 24px;
+    color: rgb(249, 172, 124);
+    font-size: 20px;
 }
 
 #found{
