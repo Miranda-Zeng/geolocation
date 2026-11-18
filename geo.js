@@ -14,7 +14,7 @@ function openServices() {
         navigator.geolocation.getCurrentPosition(function(e) {
             // myLocation.innerHTML = "you're here: " + e.coords.latitude + ", " + e.coords.longitude;
             console.log("location:", e.coords.latitude, e.coords.longitude);
-            if (Math.abs(e.coords.latitude - PenguinLat) < 0.001 && Math.abs(e.coords.longitude - PenguinLong) < 0.001) {
+            if (Math.abs(e.coords.latitude - PenguinLat) < 0.0001 && Math.abs(e.coords.longitude - PenguinLong) < 0.0001) {
                 myLocation.innerHTML = "you're steaming hot"       
             }
             else {
