@@ -1,11 +1,8 @@
 
-//teaching podium
-
-let teachingLat = 40.69335958934216;
-let teachingLong = -73.98806824916387;
-
+//emperor penguin
+let PenguinLat = 40.693306781163635;
+let PenguinLong = -73.98756837816525;
 //1 unit is 365,221 ft
-
 //.0001 is approx 36.5 ft
 
 function openServices() {
@@ -15,16 +12,15 @@ function openServices() {
         //console.log(navigator.geolocation.getCurrentPosition);
         //navigator geolocation getcurrentposition takes a callback function as an argument (provides coords when they are available )
         navigator.geolocation.getCurrentPosition(function(e) {
-            myLocation.innerHTML = "you're here: " + e.coords.latitude + ", " + e.coords.longitude;
+            // myLocation.innerHTML = "you're here: " + e.coords.latitude + ", " + e.coords.longitude;
             console.log("location:", e.coords.latitude, e.coords.longitude);
-            // if (Math.abs(e.coords.latitude - teachingLat) < 0.0001 && Math.abs(e.coords.longitude - teachingLong) < 0.0001) {
-            //     myLocation.innerHTML = "you're steaming hot"
-                
-            // }
-            // else {
-            //     myLocation.innerHTML = "you're cold"
-            //     myLocation.innerHTML += ", you are this many feet away: " + (Math.abs(e.coords.latitude - teachingLat) + Math.abs(e.coords.longitude - teachingLong) * 364000)
-            // }
+            if (Math.abs(e.coords.latitude - PenguinLat) < 0.001 && Math.abs(e.coords.longitude - PenguinLong) < 0.001) {
+                myLocation.innerHTML = "you're steaming hot"       
+            }
+            else {
+                myLocation.innerHTML = "you're cold"
+                // myLocation.innerHTML += ", you are this many feet away: " + (Math.abs(e.coords.latitude - PenguinLat) + Math.abs(e.coords.longitude - PenguinLong) * 364000)
+            }
         }); 
         
         
