@@ -6,12 +6,27 @@ body {
     font-family: Arial, sans-serif;
 }
 
-
 #canva {
     width: 100%;
     max-width: 420px;
     margin: 0 auto;
     text-align: center;
+}
+
+h1{
+    font-size: 32px;
+    margin-top: 50px;
+    color: #234f70;
+}
+
+button{
+    width: 100%;
+    padding: 18px;
+    border: none;
+    border-radius: 12px;
+    background-color: #234f70;
+    color: white;
+    font-size: 18px;
 }
 
 #location {
