@@ -36,7 +36,12 @@ function openServices() {
     }
 };
 
-
+function showPenguin(){
+    document.getElementById("penguinProfile").style.display = "block";
+    document.getElementById("canva").querySelector("h1").style.display = "none";
+    document.getElementById("location").style.display = "none";
+    document.getElementById("found").style.display = "none";
+}
 
 // function checkLocation () {
 //   if ( 'geolocation' in navigator) {

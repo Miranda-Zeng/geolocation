@@ -11,7 +11,28 @@
         <p id="myLocation">press button to enable location services</p>
         <button id="enableServices" onclick="openServices()">Let's find the penguin! 🐧</button>
         </div>
-        <button id="found" onclick="">I see the Penguin!!</button>
+        <button id="found" onclick="showPenguin()">I see the Penguin!!</button>
+        </div>
+
+        <div id="penguinProfile" style="display: none;">
+            <img src="penguin.jpg" alt="baby emperor penguin">
+            <h2>Hi, I'm a emperor penguin chick</h2>
+            <p>
+                I was born in Antarctica, one of the coldest
+                places on Earth!
+            </p>
+            <p>
+                My fluffy feathers aren't waterproof yet,
+                so I need sea ice to stay safe while I grow.
+            </p>
+            <p>
+                But climate change is making my icy home
+                disappear too soon.
+            </p>
+            <audio controls>
+                <source src="penguin.mp3" type="audio/mpeg">
+            </audio>
+    
         </div>
     </body>
     <script src="geo.js"></script>
