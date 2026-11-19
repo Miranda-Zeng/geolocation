@@ -42,6 +42,7 @@ function openServices() {
 function showPenguin(){
     if (nearby == false){
         myLocation.innerHTML = "You are not close enough! Keep looking for the penguin!";
+        return;
     }else if(nearby == true){
     document.getElementById("penguinProfile").style.display = "block";
     document.getElementById("canva").querySelector("h1").style.display = "none";
