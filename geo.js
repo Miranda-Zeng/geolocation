@@ -2,6 +2,7 @@
 //emperor penguin
 let PenguinLat = 40.693306781163635;
 let PenguinLong = -73.98756837816525;
+let nearby = false;
 //1 unit is 365,221 ft
 //.0001 is approx 36.5 ft
 
@@ -25,11 +26,13 @@ function openServices() {
             // myLocation.innerHTML = "you're here: " + e.coords.latitude + ", " + e.coords.longitude;
         console.log("location:", e.coords.latitude, e.coords.longitude);
         if (Math.abs(e.coords.latitude - PenguinLat) < 0.0001 && Math.abs(e.coords.longitude - PenguinLong) < 0.0001) {
-            myLocation.innerHTML = "The penguin is nearby!! Look around 👀"       
+            myLocation.innerHTML = "The penguin is nearby!! Look around 👀"  
+            nearby = true;     
             }
         else {
             myLocation.innerHTML = "Keep looking"
             myLocation.innerHTML += ", you are this far away: " + distance +" meters"
+            nearby = false;
             }
         });    
         
@@ -37,6 +40,9 @@ function openServices() {
 };
 
 function showPenguin(){
+    if (nearby == false){
+        <p>You are not close enough! Keep looking for the penguin!</p>
+    }
     document.getElementById("penguinProfile").style.display = "block";
     document.getElementById("canva").querySelector("h1").style.display = "none";
     document.getElementById("location").style.display = "none";
