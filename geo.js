@@ -26,12 +26,12 @@ function openServices() {
             // myLocation.innerHTML = "you're here: " + e.coords.latitude + ", " + e.coords.longitude;
         console.log("location:", e.coords.latitude, e.coords.longitude);
         if (Math.abs(e.coords.latitude - PenguinLat) < 0.0001 && Math.abs(e.coords.longitude - PenguinLong) < 0.0001) {
-            myLocation.innerHTML = "The penguin is nearby!! Look around 👀"  
+            myLocation.innerHTML = "The penguin is nearby!! Look around 👀"  ;
             nearby = true;     
             }
         else {
             myLocation.innerHTML = "Keep looking"
-            myLocation.innerHTML += ", you are this far away: " + distance +" meters"
+            myLocation.innerHTML += ", you are this far away: " + distance +" meters";
             nearby = false;
             }
         });    
