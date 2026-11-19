@@ -41,6 +41,9 @@ function showPenguin(){
     document.getElementById("canva").querySelector("h1").style.display = "none";
     document.getElementById("location").style.display = "none";
     document.getElementById("found").style.display = "none";
+    let audio = document.getElementById("penguinAudio")
+    audio.volume = 0.3;
+    audio.play();
 }
 
 // function checkLocation () {
