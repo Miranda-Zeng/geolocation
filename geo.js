@@ -2,7 +2,7 @@
 //emperor penguin
 let PenguinLat = 40.693306781163635;
 let PenguinLong = -73.98756837816525;
-let nearby = false;
+let nearby = true;
 //1 unit is 365,221 ft
 //.0001 is approx 36.5 ft
 
@@ -44,14 +44,23 @@ function showPenguin(){
         myLocation.innerHTML = "You are not close enough! Keep looking for the penguin!";
         return;
     }else if(nearby == true){
-    document.getElementById("penguinProfile").style.display = "block";
+    document.getElementById("question").style.display = "block";
     document.getElementById("canva").querySelector("h1").style.display = "none";
     document.getElementById("location").style.display = "none";
     document.getElementById("found").style.display = "none";
+   
+    }
+}
+
+function correctAnswer(){
+    document.getElementById("penguinProfile").style.display = "block";
     let audio = document.getElementById("penguinAudio")
     audio.volume = 0.3;
     audio.play();
-    }
+}
+
+function wrongAnswer(){
+    myLocation.innerHTML = "Not quite! Take another look 👀";
 }
 
 // function checkLocation () {
