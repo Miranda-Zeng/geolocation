@@ -1,8 +1,8 @@
 
-//emperor penguin
+//emperor penguin location
 let PenguinLat = 40.693306781163635;
 let PenguinLong = -73.98756837816525;
-let nearby = true;
+let nearby = false;
 //1 unit is 365,221 ft
 //.0001 is approx 36.5 ft
 
@@ -23,9 +23,9 @@ function openServices() {
             (lonDiff * 85000) ** 2
         );
 
-            // myLocation.innerHTML = "you're here: " + e.coords.latitude + ", " + e.coords.longitude;
-        console.log("location:", e.coords.latitude, e.coords.longitude);
-        if (Math.abs(e.coords.latitude - PenguinLat) < 0.0001 && Math.abs(e.coords.longitude - PenguinLong) < 0.0001) {
+        // myLocation.innerHTML = "you're here: " + e.coords.latitude + ", " + e.coords.longitude;
+        // console.log("location:", e.coords.latitude, e.coords.longitude);
+        if (latDiff < 0.0001 && lonDiff < 0.0001) {
             myLocation.innerHTML = "The penguin is nearby!! Look around 👀"  ;
             nearby = true;     
             }
