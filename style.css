@@ -47,3 +47,14 @@ button{
 .firstButton{
     margin-bottom: 30px;
 }
+
+#question{
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+    text-align: center;
+}
+#wrong{
+    margin-top: 20px;
+    color: #041c2e;
+}
