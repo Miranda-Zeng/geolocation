@@ -55,12 +55,13 @@ function showPenguin(){
 function correctAnswer(){
     document.getElementById("penguinProfile").style.display = "block";
     document.getElementById("question").style.display = "none";
+    document.getElementById("wrong").style.display = "none";
     let audio = document.getElementById("penguinAudio")
     audio.volume = 0.3;
     audio.play();
 }
 
 function wrongAnswer(){
-    myLocation.innerHTML = "Not quite! Take another look 👀";
+    document.getElementById("wrong").style.display = "block";
 }
 
