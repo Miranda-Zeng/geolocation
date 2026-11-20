@@ -43,3 +43,7 @@ button{
 #penguinProfile img{
     width: 100%;
 }
+
+.firstButton{
+    margin-bottom: 30px;
+}

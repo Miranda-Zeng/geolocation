@@ -54,6 +54,7 @@ function showPenguin(){
 
 function correctAnswer(){
     document.getElementById("penguinProfile").style.display = "block";
+    document.getElementById("question").style.display = "none";
     let audio = document.getElementById("penguinAudio")
     audio.volume = 0.3;
     audio.play();
@@ -63,48 +64,3 @@ function wrongAnswer(){
     myLocation.innerHTML = "Not quite! Take another look 👀";
 }
 
-// function checkLocation () {
-//   if ( 'geolocation' in navigator) {
-//   console.log(navigator);
-//   console.log ( 'geolocation available');
-//   console.log(navigator.geolocation.getCurrentPosition);
-    
-//     //navigator geolocation getcurrentposition takes a callback function as an argument (provides coords when they are available )
-//   navigator.geolocation.getCurrentPosition(function(e) {
-//     console.log(e);
-//     renderLoc(e.coords.latitude, e.coords.longitude);
-//   }
-                                          
-//   );
-
-//   } else {
-//   console.log ('geolocation not available');
-//   }
-
-//   function renderLoc (lat, lon) {
-//     if (Math.abs(lat - tommyLat) < .001 && Math.abs(lon - tommyLong) < .001 ) {
-//       console.log('youre there');
-//       infoField.innerHTML = "you're there 🌎"
-//       soundy.play();
-//     }
-//     else {
-//       console.log('nope not there');
-//       infoField.innerHTML = "nope not there 👎🏼"
-//     }
-    
-//     //second site
-    
-//     if (Math.abs(lat - eltonsLat) < .001 && Math.abs(lon - eltonsLong) < .001 ) {
-//       console.log('youre there');
-//       infoField.innerHTML = "you're there 🌎"
-//       soundy.play();
-//     }
-//     else if (Math.abs(lat - eltonsLat) < .001 && Math.abs(lon - tommyLong)) {
-             
-             
-//       console.log('nope not there');
-//       infoField.innerHTML = "nope not there 👎🏼"
-//     }
-//   }
-
-// }
